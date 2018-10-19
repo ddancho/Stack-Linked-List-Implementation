@@ -138,6 +138,7 @@ main:
 		.repeat
 			mov edi,[esi + Node.pNext]
 			cinvoke printf,<'Deleting %d...',13,10,0>,dword[esi + Node.value]
+			cinvoke free,esi
 			mov esi,edi
 		.until esi = 0
 		
